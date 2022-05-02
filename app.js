@@ -38,8 +38,20 @@ app.get('/', function(req, res) {
     
 });
 
-app.post('sendposts', function(req, res){
+app.post('/sendPost', function(req, res){
+    let username = req.body.username;
+    let title = req.body.title
+    let content = req.body.content
+    
 
+    db.collection('posts').insertOne({
+        username: username,
+        title : title,
+        content: content,
+        date: new Date(),
+        avatar : 'https://ui-avatars.com/api/?name=' + username
+    })
+    res.redirect('/')
 })
 
 app.get('/createpost', function(req, res){
