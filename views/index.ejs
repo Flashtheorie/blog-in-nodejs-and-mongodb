@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://unpkg.com/@tailwindcss/forms/dist/forms.min.css" rel="stylesheet">
         <script src="https://kit.fontawesome.com/a513ca5fbe.js" crossorigin="anonymous"></script>
         <title>BLOG IN NODEJS/MONGODB</title>
     </head>
@@ -12,13 +13,13 @@
 <div class="container mx-auto sm:px-6 lg:px-8"> <!-- container -->
 
 
-  <div class="flex flex-wrap -mx-4 mb-4 justify-around"> <!-- portoflio -->
+  <div class="flex flex-wrap -mx-4 mb-4 justify-center"> <!-- portoflio -->
   
 
 
 
     <% posts.forEach((post) => { %> 
-      <div class="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20">
+      <div class="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20 m-5">
         <div class="flex justify-center md:justify-end -mt-16">
           <img class="w-20 h-20 object-cover rounded-full border-2 border-indigo-500" src="<%= post.avatar %>">
         </div>

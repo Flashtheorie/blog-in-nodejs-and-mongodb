@@ -38,6 +38,13 @@ app.get('/', function(req, res) {
     
 });
 
+app.post('sendposts', function(req, res){
+
+})
+
+app.get('/createpost', function(req, res){
+    res.render('createpost', { root: __dirname});
+})
 app.get('/delete/:id', function(req, res){
     db.collection("users").deleteOne({ username: req.params.id}, function(err, users){
         if (err) throw err;
